@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aleh Barber | Barbearia em Ceará-Mirim desde 2018</title>
+  <meta name="description" content="Aleh Barber em Ceará-Mirim/RN. Cortes masculinos, barba, ambiente climatizado e planos de assinatura mensal. Agende seu horário pelo WhatsApp." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      /* Paleta extraída das fotos oficiais da Aleh Barber */
+      --bg-dark: #0f141b;
+      --bg-surface: #171e28;
+      --bg-concrete: #232933;
+      --brand-blue: #2e5684;
+      --brand-blue-deep: #1d3c61;
+      --brand-blue-light: #4372a8;
+      --brand-cream: #f3ede2;
+      --brand-cream-muted: #d6cfc2;
+      --accent-amber: #d9822b;
+      --whatsapp: #25d366;
+      --whatsapp-hover: #1ebe5d;
+      --border-subtle: rgba(243, 237, 226, 0.12);
+      --radius-lg: 18px;
+      --radius-md: 12px;
+      --shadow-card: 0 18px 40px rgba(0, 0, 0, 0.38);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--brand-cream);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .logo-script {
+      font-family: 'Pacifico', cursive;
+      font-weight: 400;
+      color: var(--brand-cream);
+    }
+
+    /* Header */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(15, 20, 27, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .nav-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+
+    .brand-badge {
+      background: var(--brand-blue);
+      border: 1.5px solid rgba(243, 237, 226, 0.35);
+      padding: 6px 14px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1.05;
+    }
+
+    .brand-badge .logo-script {
+      font-size: 1.15rem;
+    }
+
+    .brand-badge small {
+      font-size: 0.58rem;
+      letter-spacing: 2px;
+      font-weight: 700;
+      color: var(--brand-cream);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .nav-links a {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--brand-cream-muted);
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--brand-cream);
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      padding: 13px 22px;
+      border-radius: var(--radius-md);
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s ease, background-color 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-whatsapp {
+      background-color: var(--whatsapp);
+      color: #081c0f;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.28);
+    }
+
+    .btn-whatsapp:hover {
+      background-color: var(--whatsapp-hover);
+    }
+
+    .btn-blue {
+      background-color: var(--brand-blue);
+      color: var(--brand-cream);
+      border: 1px solid rgba(243, 237, 226, 0.25);
+    }
+
+    .btn-blue:hover {
+      background-color: var(--brand-blue-light);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--brand-cream);
+      border: 1.5px solid rgba(243, 237, 226, 0.3);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--brand-cream);
+      background: rgba(243, 237, 226, 0.06);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 64px 0 80px;
+      background:
+        radial-gradient(circle at 82% 20%, rgba(46, 86, 132, 0.34), transparent 55%),
+        var(--bg-dark);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 44px;
+      align-items: center;
+    }
+
+    .pill-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(46, 86, 132, 0.38);
+      border: 1px solid rgba(243, 237, 226, 0.24);
+      color: var(--brand-cream);
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .pill-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--whatsapp);
+      box-shadow: 0 0 10px var(--whatsapp);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.1rem, 4vw, 3.2rem);
+      line-height: 1.15;
+      font-weight: 800;
+      margin-bottom: 18px;
+      color: var(--brand-cream);
+    }
+
+    .hero h1 span {
+      color: #76ace8;
+    }
+
+    .hero p {
+      font-size: 1.06rem;
+      color: var(--brand-cream-muted);
+      margin-bottom: 28px;
+      max-width: 550px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 34px;
+    }
+
+    .trust-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      padding-top: 22px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .trust-item strong {
+      display: block;
+      font-size: 1.1rem;
+      color: var(--brand-cream);
+    }
+
+    .trust-item span {
+      font-size: 0.82rem;
+      color: var(--brand-cream-muted);
+    }
+
+    /* Hero Visual Stack com as fotos reais */
+    .hero-visual-stack {
+      display: grid;
+      gap: 16px;
+    }
+
+    .hero-main-photo {
+      border-radius: 22px;
+      overflow: hidden;
+      border: 2px solid rgba(243, 237, 226, 0.28);
+      background: var(--bg-surface);
+      box-shadow: var(--shadow-card);
+      aspect-ratio: 4 / 3.2;
+      position: relative;
+    }
+
+    .hero-main-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .hero-photo-badge {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      right: 14px;
+      background: rgba(15, 20, 27, 0.86);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(243, 237, 226, 0.2);
+      border-radius: 12px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.84rem;
+    }
+
+    .hero-logo-strip {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 2px solid rgba(243, 237, 226, 0.22);
+      background: var(--brand-blue);
+      height: 126px;
+      position: relative;
+    }
+
+    .hero-logo-strip img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    /* Placeholder visível caso a imagem ainda não esteja na pasta */
+    .missing-img-box {
+      width: 100%;
+      height: 100%;
+      min-height: 120px;
+      background: linear-gradient(135deg, var(--brand-blue-deep), var(--bg-concrete));
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 16px;
+      color: var(--brand-cream);
+      font-size: 0.84rem;
+      gap: 6px;
+    }
+
+    .missing-img-box code {
+      background: rgba(0, 0, 0, 0.35);
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      color: #9ec5f5;
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 48px;
+    }
+
+    .section-kicker {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #76ace8;
+      margin-bottom: 10px;
+    }
+
+    .section-header h2 {
+      font-size: clamp(1.75rem, 3.2vw, 2.45rem);
+      font-weight: 800;
+      color: var(--brand-cream);
+      margin-bottom: 12px;
+    }
+
+    .section-header p {
+      color: var(--brand-cream-muted);
+      font-size: 1rem;
+    }
+
+    /* Estrutura & Galeria */
+    .structure-section {
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .gallery-showcase {
+      display: grid;
+      grid-template-columns: 1.35fr 0.85fr;
+      gap: 22px;
+      margin-bottom: 36px;
+    }
+
+    .gallery-right-col {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      gap: 22px;
+    }
+
+    .gallery-card {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1.5px solid rgba(243, 237, 226, 0.16);
+      background: var(--bg-concrete);
+      position: relative;
+      min-height: 220px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .gallery-card.tall {
+      min-height: 462px;
+    }
+
+    .gallery-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+
+    .gallery-card:hover img {
+      transform: scale(1.03);
+    }
+
+    .gallery-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 16px 18px;
+      background: linear-gradient(to top, rgba(15, 20, 27, 0.94), transparent);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--brand-cream);
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .feature-box {
+      background: var(--bg-concrete);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+    }
+
+    .feature-box h3 {
+      font-size: 1.08rem;
+      margin-bottom: 8px;
+      color: var(--brand-cream);
+    }
+
+    .feature-box p {
+      font-size: 0.9rem;
+      color: var(--brand-cream-muted);
+    }
+
+    /* Serviços */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 24px 26px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .service-card:hover {
+      border-color: rgba(118, 172, 232, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .service-info h3 {
+      font-size: 1.12rem;
+      margin-bottom: 4px;
+      color: var(--brand-cream);
+    }
+
+    .service-info p {
+      font-size: 0.88rem;
+      color: var(--brand-cream-muted);
+    }
+
+    /* Planos Mensais */
+    .plans-section {
+      background:
+        radial-gradient(circle at 50% 0%, rgba(46, 86, 132, 0.28), transparent 60%),
+        var(--bg-surface);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .plans-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      align-items: stretch;
+    }
+
+    .plan-card {
+      background: var(--brand-cream);
+      color: #141922;
+      border-radius: 20px;
+      padding: 26px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-card);
+      position: relative;
+      border: 2px solid transparent;
+      transition: transform 0.25s ease;
+    }
+
+    .plan-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .plan-card.featured {
+      border-color: var(--accent-amber);
+    }
+
+    .plan-ribbon {
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--brand-blue);
+      color: var(--brand-cream);
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.9px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 999px;
+      white-space: nowrap;
+      border: 1.5px solid var(--brand-cream);
+    }
+
+    .plan-card h3 {
+      font-size: 1.26rem;
+      font-weight: 800;
+      color: #141922;
+      margin-bottom: 14px;
+    }
+
+    .plan-label {
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      color: #c8332b;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .plan-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .plan-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: #27303f;
+    }
+
+    .check-circle {
+      width: 18px;
+      height: 18px;
+      min-width: 18px;
+      border-radius: 50%;
+      border: 1.6px solid #e03a31;
+      color: #e03a31;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.68rem;
+      font-weight: 800;
+      margin-top: 2px;
+    }
+
+    .plan-footer {
+      border-top: 1px solid rgba(20, 25, 34, 0.12);
+      padding-top: 18px;
+    }
+
+    .plan-price {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .plan-price strong {
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: #141922;
+    }
+
+    .plan-price span {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #4b5565;
+    }
+
+    .btn-plan {
+      width: 100%;
+      background: var(--brand-blue);
+      color: var(--brand-cream);
+      border-radius: 999px;
+      padding: 12px 18px;
+      font-size: 0.88rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .btn-plan:hover {
+      background: var(--brand-blue-deep);
+    }
+
+    /* Agendamento Rápido */
+    .booking-box {
+      background: linear-gradient(135deg, var(--brand-blue-deep), var(--bg-concrete));
+      border: 1.5px solid rgba(243, 237, 226, 0.22);
+      border-radius: 24px;
+      padding: 40px;
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 36px;
+      align-items: center;
+      box-shadow: var(--shadow-card);
+    }
+
+    .booking-box h2 {
+      font-size: 1.9rem;
+      margin-bottom: 12px;
+      color: var(--brand-cream);
+    }
+
+    .booking-box p {
+      color: var(--brand-cream-muted);
+      margin-bottom: 18px;
+    }
+
+    .booking-form {
+      display: grid;
+      gap: 14px;
+      background: rgba(15, 20, 27, 0.68);
+      padding: 24px;
+      border-radius: 18px;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--brand-cream);
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(243, 237, 226, 0.22);
+      background: var(--bg-surface);
+      color: var(--brand-cream);
+      font-family: inherit;
+      font-size: 0.94rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    /* Avaliações Google Maps (Sem foto dos clientes) */
+    .reviews-section {
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .google-summary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--bg-concrete);
+      border: 1px solid var(--border-subtle);
+      padding: 8px 18px;
+      border-radius: 999px;
+      margin-top: 14px;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .stars {
+      color: #fbbc04;
+      letter-spacing: 2px;
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .review-card {
+      background: var(--bg-concrete);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .review-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    .reviewer-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .avatar-initials {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--brand-blue);
+      color: var(--brand-cream);
+      border: 1.5px solid rgba(243, 237, 226, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 0.95rem;
+    }
+
+    .reviewer-name strong {
+      display: block;
+      font-size: 0.98rem;
+      color: var(--brand-cream);
+    }
+
+    .reviewer-name span {
+      font-size: 0.76rem;
+      color: var(--brand-cream-muted);
+    }
+
+    .google-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--brand-cream-muted);
+    }
+
+    .review-text {
+      font-size: 0.93rem;
+      color: var(--brand-cream-muted);
+      font-style: italic;
+    }
+
+    /* Footer */
+    footer {
+      background: #0a0e14;
+      padding: 56px 0 32px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr 1fr;
+      gap: 36px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .footer-col h4 {
+      font-size: 1rem;
+      margin-bottom: 14px;
+      color: var(--brand-cream);
+    }
+
+    .footer-col p,
+    .footer-col li {
+      font-size: 0.9rem;
+      color: var(--brand-cream-muted);
+      list-style: none;
+      margin-bottom: 8px;
+    }
+
+    .footer-bottom {
+      padding-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 0.82rem;
+      color: var(--brand-cream-muted);
+    }
+
+    /* Botão Flutuante WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      z-index: 999;
+      background: var(--whatsapp);
+      color: #081c0f;
+      padding: 14px 20px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 0.92rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.4);
+      transition: transform 0.2s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 1024px) {
+      .plans-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .hero-grid,
+      .booking-box,
+      .gallery-showcase {
+        grid-template-columns: 1fr;
+      }
+      .gallery-card.tall {
+        min-height: 320px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .features-grid,
+      .services-grid,
+      .reviews-grid,
+      .footer-grid,
+      .plans-grid {
+        grid-template-columns: 1fr;
+      }
+      .trust-row {
+        grid-template-columns: 1fr 1fr;
+      }
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+      .booking-box {
+        padding: 26px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav-wrapper">
+      <a href="#" class="brand-link" aria-label="Aleh Barber Início">
+        <div class="brand-badge">
+          <span class="logo-script">Aleh Barber</span>
+          <small>- DESDE 2018 -</small>
+        </div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#estrutura">A Barbearia</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#planos">Planos Mensais</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#contato">Localização</a>
+      </nav>
+
+      <a
+        href="https://wa.me/558494221865?text=Ol%C3%A1%20Aleh!%20Vim%20pelo%20site%20e%20gostaria%20de%20agendar%20um%20hor%C3%A1rio."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn-whatsapp"
+      >
+        <span>Agendar Horário</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- HERO COM FOTOS REAIS -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="pill-tag">
+          <span class="pill-dot"></span>
+          <span>Ceará-Mirim • RN • Desde 2018</span>
+        </div>
+
+        <h1>
+          Corte e barba no padrão certo, <span>sem espera</span> e com atendimento de primeira.
+        </h1>
+
+        <p>
+          Na <strong>Aleh Barber</strong>, você encontra ambiente climatizado, técnica apurada para todos os estilos de cabelo e planos mensais para manter o visual sempre em dia.
+        </p>
+
+        <div class="hero-actions">
+          <a
+            href="https://wa.me/558494221865?text=Ol%C3%A1%20Aleh!%20Quero%20agendar%20um%20hor%C3%A1rio%20na%20barbearia."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-whatsapp"
+          >
+            Agendar pelo WhatsApp
+          </a>
+          <a href="#planos" class="btn btn-outline">
+            Ver Planos a partir de R$ 48,99
+          </a>
+        </div>
+
+        <div class="trust-row">
+          <div class="trust-item">
+            <strong>Desde 2018</strong>
+            <span>Tradição em Ceará-Mirim</span>
+          </div>
+          <div class="trust-item">
+            <strong>5.0 ★ Google</strong>
+            <span>Avaliação dos clientes</span>
+          </div>
+          <div class="trust-item">
+            <strong>Climatizada</strong>
+            <span>Conforto e café na espera</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coluna direita com Foto 4 (Aleh cortando) + Foto 1 (Logo oficial na parede) -->
+      <div class="hero-visual-stack">
+        <div class="hero-main-photo">
+          <img
+            class="smart-photo"
+            data-label="Foto 4 (Aleh atendendo)"
+            data-candidates='["foto4.jpg","Captura de Tela 2026-11-24 às 18.49.34.jpg","Captura de Tela 2026-11-24 às 18.49.34.jpg","Captura de Tela 2026-11-24 às 18.49.34_2.jpg","Captura de Tela 2026-11-24 às 18.49.34_2.jpg","foto4.png"]'
+            src="foto4.jpg"
+            alt="Aleh realizando corte técnico na Aleh Barber"
+          />
+          <div class="hero-photo-badge">
+            <strong>Atendimento Especializado</strong>
+            <span style="color: #76ace8; font-weight: 700;">Desde 2018</span>
+          </div>
+        </div>
+
+        <div class="hero-logo-strip">
+          <img
+            class="smart-photo"
+            data-label="Foto 1 (Logo oficial na parede)"
+            data-candidates='["foto1.jpg","Captura de Tela 2026-11-24 às 18.48.44.jpg","Captura de Tela 2026-11-24 às 18.48.44.jpg","Captura de Tela 2026-11-24 às 18.48.44_2.jpg","Captura de Tela 2026-11-24 às 18.48.44_2.jpg","foto1.png"]'
+            src="foto1.jpg"
+            alt="Logo oficial Aleh Barber Desde 2018"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ESTRUTURA & GALERIA REAL DA BARBEARIA -->
+  <section id="estrutura" class="structure-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">Nossa Estrutura</span>
+        <h2>Conheça o espaço da Aleh Barber</h2>
+        <p>Salão climatizado, cadeiras confortáveis e bancadas completas para você relaxar enquanto cuida do visual.</p>
+      </div>
+
+      <div class="gallery-showcase">
+        <!-- Foto 3: Visão ampla do salão -->
+        <div class="gallery-card tall">
+          <img
+            class="smart-photo"
+            data-label="Foto 3 (Salão completo)"
+            data-candidates='["foto3.jpg","Captura de Tela 2026-11-24 às 18.49.11.jpg","Captura de Tela 2026-11-24 às 18.49.11.jpg","Captura de Tela 2026-11-24 às 18.49.11_2.jpg","Captura de Tela 2026-11-24 às 18.49.11_2.jpg","foto3.png"]'
+            src="foto3.jpg"
+            alt="Salão principal climatizado da Aleh Barber com sofá, espelhos e cadeiras"
+          />
+          <div class="gallery-caption">Salão 100% climatizado, sofá de espera, café e bancadas individuais</div>
+        </div>
+
+        <div class="gallery-right-col">
+          <!-- Foto 2: Cadeira e parede azul com logo -->
+          <div class="gallery-card">
+            <img
+              class="smart-photo"
+              data-label="Foto 2 (Cadeira e parede azul)"
+              data-candidates='["foto2.jpg","Captura de Tela 2026-11-24 às 18.48.58.jpg","Captura de Tela 2026-11-24 às 18.48.58.jpg","Captura de Tela 2026-11-24 às 18.48.58_2.jpg","Captura de Tela 2026-11-24 às 18.48.58_2.jpg","foto2.png"]'
+              src="foto2.jpg"
+              alt="Cadeira de barbeiro e parede oficial Aleh Barber"
+            />
+            <div class="gallery-caption">Identidade própria e conforto em cada detalhe</div>
+          </div>
+
+          <!-- Foto 4: Precisão no corte -->
+          <div class="gallery-card">
+            <img
+              class="smart-photo"
+              data-label="Foto 4 (Precisão no corte)"
+              data-candidates='["foto4.jpg","Captura de Tela 2026-11-24 às 18.49.34.jpg","Captura de Tela 2026-11-24 às 18.49.34.jpg","Captura de Tela 2026-11-24 às 18.49.34_2.jpg","Captura de Tela 2026-11-24 às 18.49.34_2.jpg","foto4.png"]'
+              src="foto4.jpg"
+              alt="Corte técnico e acabamento na Aleh Barber"
+            />
+            <div class="gallery-caption">Técnica para degradê, social, crespos e cacheados</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-box">
+          <h3>❄️ Ambiente Climatizado</h3>
+          <p>Espaço refrigerado, TV, poltronas confortáveis e café sempre à disposição enquanto você aguarda.</p>
+        </div>
+        <div class="feature-box">
+          <h3>✂️ Todos os Estilos de Corte</h3>
+          <p>Especialidade em degradê navalhado, corte social, cabelos crespos e cacheados e barba desenhada.</p>
+        </div>
+        <div class="feature-box">
+          <h3>📲 Agendamento pelo WhatsApp</h3>
+          <p>Escolha o serviço ou plano e reserve seu horário em poucos cliques direto no WhatsApp do Aleh.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS AVULSOS -->
+  <section id="servicos">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">Serviços Avulsos</span>
+        <h2>Escolha seu atendimento e agende agora</h2>
+        <p>Clique no serviço desejado para abrir o WhatsApp já com a mensagem pronta.</p>
+      </div>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-info">
+            <h3>Corte Masculino Completo</h3>
+            <p>Degradê, social, tesoura ou máquina com acabamento na navalha e finalização.</p>
+          </div>
+          <a
+            href="https://wa.me/558494221865?text=Ol%C3%A1%20Aleh!%20Gostaria%20de%20agendar%20um%20*Corte%20Masculino*."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-blue"
+          >
+            Agendar
+          </a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-info">
+            <h3>Barba Alinhada</h3>
+            <p>Modelagem completa, hidratação e alinhamento preciso com navalha.</p>
+          </div>
+          <a
+            href="https://wa.me/558494221865?text=Ol%C3%A1%20Aleh!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio%20para%20*Barba*."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-blue"
+          >
+            Agendar
+          </a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-info">
+            <h3>Combo Corte + Barba</h3>
+            <p>O pacote completo para sair com cabelo e barba alinhados no mesmo horário.</p>
+          </div>
+          <a
+            href="https://wa.me/558494221865?text=Ol%C3%A1%20Aleh!%20Gostaria%20de%20agendar%20o%20*Combo%20Corte%20%2B%20Barba*."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-blue"
+          >
+            Agendar
+          </a>
+        </div>
+
+        <div class="service-card">
+          <div class="service-info">
+            <h3>Pezinho & Acabamento</h3>
+            <p>Manutenção rápida do contorno do corte e da barba para manter o visual em dia.</p>
+          </div>
+          <a
+            href="https://wa.me/558494221865?text=Ol%C3%A1%20Aleh!%20Gostaria%20de%20agendar%20*Pezinho%20e%20Acabamento*."
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-blue"
+          >
+            Agendar
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANOS MENSAIS -->
+  <section id="planos" class="plans-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">Clube Aleh Barber</span>
+        <h2>Assine um plano mensal e economize</h2>
+        <p>Visual sempre alinhado o mês inteiro com benefícios exclusivos na barbearia e na loja Vizoom.</p>
+      </div>
+
+      <div class="plans-grid">
+        <!-- Plano 1: Corte Limitado R$ 48,99 -->
+        <div class="plan-card">
+          <div>
+            <h3>Corte Limitado</h3>
+            <span class="plan-label">Incluso:</span>
+            <ul class="plan-list">
+              <li><span class="check-circle">✓</span><span>Cortes mensais do plano econômico</span></li>
+              <li><span class="check-circle">✓</span><span>20% Off na loja Vizoom</span></li>
+              <li><span class="check-circle">✓</span><span>Agendamento rápido pelo WhatsApp</span></li>
+            </ul>
+          </div>
+          <div class="plan-footer">
+            <div class="plan-price">
+              <strong>R$ 48,99</strong>
+              <span>Mensal</span>
+            </div>
+            <a
+              href="https://wa.me/558494221865?text=Ol%C3%A1%20Aleh!%20Tenho%20interesse%20em%20assinar%20o%20plano%20*Corte%20Limitado%20(R%24%2048%2C99%2Fm%C3%AAs)*.%20Como%20funciona%3F"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-plan"
+            >
+              Assinar
+            </a>
+          </div>
+        </div>
+
+        <!-- Plano 2: Corte Ilimitado R$ 69,99 -->
+        <div class="plan-card featured">
+          <div class="plan-ribbon">Mais Procurado</div>
+          <div>
+            <h3>Corte Ilimitado</h3>
+            <span class="plan-label">Incluso:</span>
+            <ul class="plan-list">
+              <li><span class="check-circle">✓</span><span>Cortes ilimitados no mês</span></li>
+              <li><span class="check-circle">✓</span><span>Pezinho incluso</span></li>
+              <li><span class="check-circle">✓</span><span>10% desconto em serviços extras</span></li>
+              <li><span class="check-circle">✓</span><span>10% desconto em produtos</span></li>
+              <li><span class="check-circle">✓</span><span>20% Off na loja Vizoom</span></li>
+            </ul>
+          </div>
+          <div class="plan-footer">
+            <div class="plan-price">
+              <strong>R$ 69,99</strong>
+              <span>Mensal</span>
+            </div>
+            <a
+              href="https://wa.me/558494221865?text=Ol%C3%A1%20Aleh!%20Quero%20assinar%20o%20plano%20*Corte%20Ilimitado%20(R%24%2069%2C99%2Fm%C3%AAs)*!"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-plan"
+            >
+              Assinar
+            </a>
+          </div>
+        </div>
+
+        <!-- Plano 3: Barba Ilimitada R$ 94,99 -->
+        <div class="plan-card">
+          <div>
+            <h3>Barba Ilimitada</h3>
+            <span class="plan-label">Incluso:</span>
+            <ul class="plan-list">
+              <li><span class="check-circle">✓</span><span>Barba ilimitada no mês</span></li>
+              <li><span class="check-circle">✓</span><span>Descontos em produtos</span></li>
+              <li><span class="check-circle">✓</span><span>Descontos em serviços extras</span></li>
+              <li><span class="check-circle">✓</span><span>20% Off na loja Vizoom</span></li>
+            </ul>
+          </div>
+          <div class="plan-footer">
+            <div class="plan-price">
+              <strong>R$ 94,99</strong>
+              <span>Mensal</span>
+            </div>
+            <a
+              href="https://wa.me/558494221865?text=Ol%C3%A1%20Aleh!%20Quero%20assinar%20o%20plano%20*Barba%20Ilimitada%20(R%24%2094%2C99%2Fm%C3%AAs)*!"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-plan"
+            >
+              Assinar
+            </a>
+          </div>
+        </div>
+
+        <!-- Plano 4: Corte e Barba Ilimitado R$ 159,99 -->
+        <div class="plan-card">
+          <div>
+            <h3>Corte e Barba Ilimitado</h3>
+            <span class="plan-label">Incluso:</span>
+            <ul class="plan-list">
+              <li><span class="check-circle">✓</span><span>Corte e barba ilimitados no mês</span></li>
+              <li><span class="check-circle">✓</span><span>Pezinho incluso</span></li>
+              <li><span class="check-circle">✓</span><span>Descontos em serviços extras</span></li>
+              <li><span class="check-circle">✓</span><span>Descontos em produtos</span></li>
+              <li><span class="check-circle">✓</span><span>20% Off na loja Vizoom</span></li>
+            </ul>
+          </div>
+          <div class="plan-footer">
+            <div class="plan-price">
+              <strong>R$ 159,99</strong>
+              <span>Mensal</span>
+            </div>
+            <a
+              href="https://wa.me/558494221865?text=Ol%C3%A1%20Aleh!%20Quero%20assinar%20o%20plano%20*Corte%20e%20Barba%20Ilimitado%20(R%24%20159%2C99%2Fm%C3%AAs)*!"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-plan"
+            >
+              Assinar
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AGENDAMENTO RÁPIDO INTERATIVO -->
+  <section id="agendar">
+    <div class="container">
+      <div class="booking-box">
+        <div>
+          <span class="section-kicker">Agendamento Online</span>
+          <h2>Monte seu agendamento em 10 segundos</h2>
+          <p>
+            Escolha o serviço ou plano desejado e o melhor turno. Ao clicar no botão, você será direcionado direto para o WhatsApp oficial da <strong>Aleh Barber</strong>.
+          </p>
+          <p style="font-size: 0.92rem; color: var(--brand-cream);">
+            📱 WhatsApp direto: <strong>(84) 99422-1865</strong>
+          </p>
+        </div>
+
+        <form class="booking-form" id="whatsappBookingForm">
+          <div class="form-group">
+            <label for="clientName">Seu Nome</label>
+            <input type="text" id="clientName" placeholder="Ex: João Silva" required />
+          </div>
+
+          <div class="form-group">
+            <label for="serviceChoice">Serviço ou Plano Desejado</label>
+            <select id="serviceChoice" required>
+              <option value="Corte Masculino Avulso">Corte Masculino Avulso</option>
+              <option value="Barba Avulsa">Barba Avulsa</option>
+              <option value="Combo Corte + Barba">Combo Corte + Barba</option>
+              <option value="Plano Corte Limitado (R$ 48,99/mês)">Plano Corte Limitado — R$ 48,99/mês</option>
+              <option value="Plano Corte Ilimitado (R$ 69,99/mês)">Plano Corte Ilimitado — R$ 69,99/mês</option>
+              <option value="Plano Barba Ilimitada (R$ 94,99/mês)">Plano Barba Ilimitada — R$ 94,99/mês</option>
+              <option value="Plano Corte e Barba Ilimitado (R$ 159,99/mês)">Plano Corte e Barba Ilimitado — R$ 159,99/mês</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="preferredDay">Dia de Preferência</label>
+              <select id="preferredDay">
+                <option value="Hoje">Hoje</option>
+                <option value="Amanhã">Amanhã</option>
+                <option value="Sexta-feira">Sexta-feira</option>
+                <option value="Sábado">Sábado</option>
+                <option value="Outro dia da semana">Outro dia da semana</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="preferredShift">Turno</label>
+              <select id="preferredShift">
+                <option value="Manhã">Manhã</option>
+                <option value="Tarde">Tarde</option>
+                <option value="Final da tarde / Noite">Final da tarde / Noite</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-whatsapp" style="width: 100%; margin-top: 6px;">
+            Enviar Agendamento no WhatsApp
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVALIAÇÕES OFICIAIS DO GOOGLE MAPS (SEM IMAGEM DOS CLIENTES) -->
+  <section id="avaliacoes" class="reviews-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-kicker">Prova Social Real</span>
+        <h2>O que dizem os clientes no Google Maps</h2>
+        <p>Avaliações reais de quem já corta e assina os planos da Aleh Barber em Ceará-Mirim.</p>
+        <div class="google-summary">
+          <span class="stars">★★★★★</span>
+          <span>5.0 no Google Maps</span>
+        </div>
+      </div>
+
+      <div class="reviews-grid">
+        <article class="review-card">
+          <div>
+            <div class="review-header">
+              <div class="reviewer-meta">
+                <div class="avatar-initials" aria-hidden="true">FF</div>
+                <div class="reviewer-name">
+                  <strong>Floriano Filho</strong>
+                  <span>Cliente • Google Maps</span>
+                </div>
+              </div>
+              <span class="google-tag">Google ★ 5.0</span>
+            </div>
+            <div class="stars" style="margin: 14px 0 10px; font-size: 0.95rem;">★★★★★</div>
+            <p class="review-text">
+              "Excelente atendimento, ambiente climatizado e muito organizado. O Aleh é um profissional de primeira, corte impecável e pontualidade no horário marcado."
+            </p>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div>
+            <div class="review-header">
+              <div class="reviewer-meta">
+                <div class="avatar-initials" aria-hidden="true">EI</div>
+                <div class="reviewer-name">
+                  <strong>Ewerson Imports</strong>
+                  <span>Cliente • Google Maps</span>
+                </div>
+              </div>
+              <span class="google-tag">Google ★ 5.0</span>
+            </div>
+            <div class="stars" style="margin: 14px 0 10px; font-size: 0.95rem;">★★★★★</div>
+            <p class="review-text">
+              "Melhor barbearia de Ceará-Mirim! Profissionalismo nota 10, estrutura top e resultado sempre acima do esperado. Recomendo demais."
+            </p>
+          </div>
+        </article>
+
+        <article class="review-card">
+          <div>
+            <div class="review-header">
+              <div class="reviewer-meta">
+                <div class="avatar-initials" aria-hidden="true">BC</div>
+                <div class="reviewer-name">
+                  <strong>Breno Costta</strong>
+                  <span>Assinante • Google Maps</span>
+                </div>
+              </div>
+              <span class="google-tag">Google ★ 5.0</span>
+            </div>
+            <div class="stars" style="margin: 14px 0 10px; font-size: 0.95rem;">★★★★★</div>
+            <p class="review-text">
+              "Sou assinante do plano mensal e vale muito a pena. Atendimento rápido, corte sempre no padrão e ambiente super agradável. Indico de olhos fechados!"
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contato">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="brand-badge" style="display: inline-flex; margin-bottom: 14px;">
+            <span class="logo-script">Aleh Barber</span>
+            <small>- DESDE 2018 -</small>
+          </div>
+          <p>
+            Tradição, estilo e atendimento personalizado em Ceará-Mirim/RN. Agende seu horário ou faça parte do nosso clube de assinatura mensal.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Atendimento & Contato</h4>
+          <ul>
+            <li>📍 Ceará-Mirim — Rio Grande do Norte</li>
+            <li>📱 WhatsApp: (84) 99422-1865</li>
+            <li>❄️ Ambiente 100% Climatizado</li>
+            <li>⏰ Atendimento com hora marcada</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Acesso Rápido</h4>
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <a
+              href="https://wa.me/558494221865?text=Ol%C3%A1%20Aleh!%20Gostaria%20de%20agendar%20um%20hor%C3%A1rio."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-whatsapp"
+            >
+              Agendar no WhatsApp
+            </a>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Aleh+Barber+Ceara+Mirim+RN"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-outline"
+            >
+              Abrir no Google Maps
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Aleh Barber — Todos os direitos reservados.</span>
+        <span>Ceará-Mirim • Rio Grande do Norte</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÃO FLUTUANTE WHATSAPP -->
+  <a
+    href="https://wa.me/558494221865?text=Ol%C3%A1%20Aleh!%20Vim%20pelo%20site%20e%20quero%20agendar%20um%20hor%C3%A1rio."
+    target="_blank"
+    rel="noopener noreferrer"
+    class="whatsapp-float"
+    aria-label="Agendar pelo WhatsApp"
+  >
+    <span>💬 Agendar WhatsApp</span>
+  </a>
+
+  <!-- SCRIPTS: CARREGADOR AUTOMÁTICO DE FOTOS + WHATSAPP -->
+  <script>
+    // Testa automaticamente os nomes das capturas de tela originais e nomes curtos
+    document.querySelectorAll('img.smart-photo').forEach((img) => {
+      const candidates = JSON.parse(img.getAttribute('data-candidates') || '[]');
+      let index = 0;
+
+      img.addEventListener('error', function handleError() {
+        index += 1;
+        if (index < candidates.length) {
+          img.src = encodeURI(candidates[index]);
+        } else {
+          img.removeEventListener('error', handleError);
+          const fallback = document.createElement('div');
+          fallback.className = 'missing-img-box';
+          fallback.innerHTML = `<strong>${img.getAttribute('data-label') || 'Imagem da Barbearia'}</strong><span>Coloque o arquivo <code>${candidates[1] || candidates[0]}</code> na mesma pasta do index.html</span>`;
+          img.replaceWith(fallback);
+        }
+      });
+
+      // Inicia já tentando codificar corretamente acentos/espaços
+      if (candidates.length > 0) {
+        img.src = encodeURI(candidates[0]);
+      }
+    });
+
+    // Formulário de agendamento direto no WhatsApp
+    document.getElementById('whatsappBookingForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('clientName').value.trim();
+      const service = document.getElementById('serviceChoice').value;
+      const day = document.getElementById('preferredDay').value;
+      const shift = document.getElementById('preferredShift').value;
+
+      const message =
+        `Olá Aleh! Tudo bem? Vim pelo site da *Aleh Barber* e gostaria de agendar:\n\n` +
+        `👤 *Nome:* ${name}\n` +
+        `✂️ *Opção:* ${service}\n` +
+        `📅 *Dia:* ${day}\n` +
+        `⏰ *Turno:* ${shift}`;
+
+      const phone = '558494221865';
+      const whatsappUrl = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+    });
+  </script>
+</body>
+</html>
